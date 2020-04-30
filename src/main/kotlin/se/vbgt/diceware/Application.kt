@@ -1,19 +1,19 @@
 package se.vbgt.diceware
 
 fun main() {
-    val diceThrows = (1..6).map {
+    val wordThrows = (1..6).map {
         (1..5).map {
             Dice.rollDice()
         }
     }.toTypedArray()
 
-    val specialCharacter = (1..4).map { Dice.rollDice() }
+    val specialCharacterThrows = (1..4).map { Dice.rollDice() }
 
-    val words = DiceWareUtil.mapWords(*diceThrows).values.mapIndexed { i, s ->
-        if(i != specialCharacter[0]) {
+    val words = DiceWareUtil.mapWords(*wordThrows).values.mapIndexed { i, s ->
+        if(i != specialCharacterThrows[0]) {
             s
         } else {
-            s.replaceCharAt(specialCharacter[1] - 1 % s.length, DiceWareUtil.randomLetter(specialCharacter[2], specialCharacter[3]))
+            s.replaceCharAt(specialCharacterThrows[1] - 1 % s.length, DiceWareUtil.randomLetter(specialCharacterThrows[2], specialCharacterThrows[3]))
         }
     }
 
