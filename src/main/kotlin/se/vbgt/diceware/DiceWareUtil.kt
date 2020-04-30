@@ -14,7 +14,7 @@ object DiceWareUtil {
             } to split[1]
         }.toMap()
 
-    private val specialCharacterMatrix: Array<Array<Char>> = arrayOf(
+    private val specialCharacterMatrix = arrayOf(
         arrayOf('~', '!', '#', '$', '%', '^'),
         arrayOf('&', '*', '(', ')', '-', '='),
         arrayOf('+', '[', ']', '\\', '{', '}'),
