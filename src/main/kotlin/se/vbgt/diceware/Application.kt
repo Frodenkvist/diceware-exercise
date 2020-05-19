@@ -13,7 +13,7 @@ fun main() {
         if(i != specialCharacterThrows[0]) {
             s
         } else {
-            s.replaceCharAt(specialCharacterThrows[1] - 1 % s.length, DiceWareUtil.randomLetter(specialCharacterThrows[2], specialCharacterThrows[3]))
+            s.replaceCharAt((specialCharacterThrows[1] - 1) % s.length, DiceWareUtil.randomLetter(specialCharacterThrows[2], specialCharacterThrows[3]))
         }
     }
 
